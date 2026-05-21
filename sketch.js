@@ -43,7 +43,7 @@ function setup() {
 }
 
 function draw() {
-  background(15, 15, 20);
+  background(0, 0, 0);
 
   // Control con el mouse
   orbitControl();
@@ -113,13 +113,14 @@ function Material(x, y, z) {
   
   shininess(100); 
 
- if      (x ===  1) specularMaterial(220, 30,  20);  
+if      (x ===  1) specularMaterial(220, 30,  20);  
 else if (x === -1) specularMaterial(255, 100, 0);    
 else if (y ===  1) specularMaterial(30,  60,  200);  
 else if (y === -1) specularMaterial(0,   180, 30);   
 else if (z ===  1) specularMaterial(245, 245, 250);  
 else               specularMaterial(255, 210, 0);
 }
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
