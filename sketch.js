@@ -5,6 +5,11 @@ let tamañoCubito = 90;
 let Separacion = 1.0;  
 let rotacionX = 0;
 let rotacionY = 0;
+let Fuente;
+
+function preload(){
+  Fuente = loadFont('https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/Roboto-Regular.ttf');
+}
 
 function setup() {
   createCanvas(800, 600, WEBGL);
@@ -47,20 +52,30 @@ function setup() {
 
 function draw() {
   background(15, 15, 20);
+// --- 1. INSTRUCCIONES FIJAS EN LA ESQUINA (2D sobre 3D) ---
   push();
   translate(-width / 2, -height / 2); 
+  
+  // Solucionamos que el texto se esconda dándole una pequeñísima traslación al frente en el eje Z
+  translate(0, 0, 1); 
+
   fill(0, 0, 0, 220); 
   noStroke();
-  rect(15, 15, 255, 90, 8);
+  rect(15, 15, 255, 90, 8); 
+  
+  // Configuramos el texto con la fuente cargada
+  textFont(Fuente); // <--- REVISA QUE TENGA ESTA LÍNEA
   fill(255);
   textSize(14);
   textAlign(LEFT, TOP);
-  text("CONTROL DE LAS MANOS:", 25, 25);
+  text("🎮 CONTROL DE LAS MANOS:", 25, 25);
+  
   textSize(12);
-  fill(200);
-  text("• Usa 1 Mano (Índice) para Girar el cubo", 20, 45);
-  text("• Usa 2 Manos para Separar / Unir cubitos", 20, 65);
+  fill(230);
+  text("• Usa 1 Mano (Índice) para Girar el cubo", 25, 50);
+  text("• Usa 2 Manos para Separar / Unir cubitos", 25, 70);
   pop(); 
+  // --- FIN DE INSTRUCCIONES FIJAS --- 
 
   orbitControl();
   
