@@ -119,7 +119,7 @@ else if (y ===  1) specularMaterial(30,  60,  200);
 else if (y === -1) specularMaterial(0,   180, 30);   
 else if (z ===  1) specularMaterial(245, 245, 250);  
 else               specularMaterial(255, 210, 0);
-
+}
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
