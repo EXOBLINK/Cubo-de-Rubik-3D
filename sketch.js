@@ -49,6 +49,7 @@ function draw() {
   orbitControl();
   
   // ILUMINACIÓN 
+  ambientligth(120,120,120);
   pointLight(255, 255, 255, 350, -400, 500);   
   pointLight(160, 160, 160, -400, 400, -300);
 
@@ -112,13 +113,12 @@ function Material(x, y, z) {
   
   shininess(100); 
 
- if      (x ===  1) specularMaterial(255, 10,  10);  
-  else if (x === -1) specularMaterial(255, 110, 0);  
-  else if (y ===  1) specularMaterial(10,  70,  255); 
-  else if (y === -1) specularMaterial(0,   220, 30);  
-  else if (z ===  1) specularMaterial(245, 245, 250); 
-  else               specularMaterial(255, 215, 0);
-}
+ if      (x ===  1) specularMaterial(220, 30,  20);  
+else if (x === -1) specularMaterial(255, 100, 0);    
+else if (y ===  1) specularMaterial(30,  60,  200);  
+else if (y === -1) specularMaterial(0,   180, 30);   
+else if (z ===  1) specularMaterial(245, 245, 250);  
+else               specularMaterial(255, 210, 0);
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
