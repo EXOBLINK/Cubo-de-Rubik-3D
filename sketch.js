@@ -113,12 +113,12 @@ function Material(x, y, z) {
   
   shininess(100); 
 
-  if      (x ===  1) specularMaterial(255, 10,  10); 
-  else if (x === -1) specularMaterial(255, 110, 0);  
-  else if (y ===  1) specularMaterial(10,  70,  255);
-   else if (y === -1) specularMaterial(0,   220, 30);  
-  else if (z ===  1) specularMaterial(245, 245, 250); 
-  else               specularMaterial(255, 215, 0);   
+ if      (x ===  1) specularMaterial(255, 10,  10);  // Rojo
+  else if (x === -1) specularMaterial(255, 110, 0);   // Naranja
+  else if (y ===  1) specularMaterial(10,  70,  255); // Azul
+  else if (y === -1) specularMaterial(0,   220, 30);  // Verde
+  else if (z ===  1) specularMaterial(245, 245, 250); // Blanco
+  else               specularMaterial(255, 215, 0);   // Amarillo
 }
 
 function windowResized() {
