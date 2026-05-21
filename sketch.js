@@ -49,7 +49,6 @@ function draw() {
   orbitControl();
   
   // ILUMINACIÓN 
-  ambientLight(120, 120, 120);
   pointLight(255, 255, 255, 350, -400, 500);   
   pointLight(160, 160, 160, -400, 400, -300);
 
