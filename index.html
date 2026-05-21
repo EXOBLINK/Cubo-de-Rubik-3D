@@ -5,7 +5,6 @@
   <title>Cubo Rubik 3D</title>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
-  
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
 
@@ -13,8 +12,14 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #0f0f14;
+      background-color: #000000;
       overflow: hidden;
+    }
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
     }
     #instrucciones {
       position: absolute;
@@ -27,8 +32,8 @@
       font-family: sans-serif;
       font-size: 13px;
       line-height: 1.5;
-      z-index: 100; /* Asegura que flote por encima del cubo */
-      pointer-events: none; /* Permite que puedas hacer clic a través del cuadro */
+      z-index: 100;
+      pointer-events: none;
     }
     #instrucciones h3 {
       margin: 0 0 8px 0;
@@ -40,7 +45,7 @@
 <body>
 
   <div id="instrucciones">
-    <h3> CONTROL DE LAS MANOS:</h3>
+    <h3>CONTROL DE LAS MANOS:</h3>
     • Usa 1 Mano (Índice) para Girar el cubo<br>
     • Usa 2 Manos para Separar / Unir cubitos
   </div>
